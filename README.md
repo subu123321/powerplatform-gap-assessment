@@ -47,7 +47,7 @@ Install-Module MicrosoftPowerBIMgmt.Admin -Force -AllowClobber -Scope CurrentUse
 Install-Module Microsoft.Graph -Force -AllowClobber -Scope CurrentUser
 
 
-📊 Output
+### 4. **📊Output**
 The script produces a professional HTML report that includes:
 
 Executive Summary: Tenant ID, assessment date, total findings
@@ -67,17 +67,18 @@ For each finding:
 📋 CIS Benchmark reference
 🔍 Evidence (e.g., environment name, policy ID)
 
-⚠️ Known Limitations
+### 5. **⚠️ Known Limitations**
 Get-AdminPowerPlatformEnvironment may fail in PowerShell 7 due to .NET compatibility issues. Use Windows PowerShell 5.1 for best results.
 Some Dataverse entity counts require additional API permissions.
 Audit log validation may require manual confirmation in the Microsoft 365 Compliance Center.
+
 🔒 Security Note
 This script uses interactive authentication and does not store credentials. All data is processed locally and never sent to external services.
 
 📄 License
 This project is licensed under the MIT License — see the LICENSE file for details.
 
-▶️ How to Run
+### 6. **▶️ How to Run**
 Open PowerShell as Administrator
 Navigate to the script directory
 powershell
