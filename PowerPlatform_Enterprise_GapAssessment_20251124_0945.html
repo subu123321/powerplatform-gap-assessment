@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Platform Enterprise Gap Assessment</title>
+    <meta charset='utf-8'>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #333; padding: 20px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border: 1px solid #ddd; vertical-align: top; }
+        th { background: #3498db; color: white; }
+        tr.critical { background-color: #ffebee; border-left: 4px solid #c62828; }
+        tr.high { background-color: #fff3e0; border-left: 4px solid #e65100; }
+        tr.medium { background-color: #f3f9e8; border-left: 4px solid #689f38; }
+        tr.low { background-color: #e3f2fd; border-left: 4px solid #1565c0; }
+        pre { background: #f4f4f4; padding: 8px; border-radius: 4px; overflow-x: auto; font-size: 0.95em; }
+        .summary { background: white; padding: 15px; border-radius: 8px; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .strategy { background: #e8f4fc; padding: 15px; border-radius: 8px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Power Platform Enterprise Gap Assessment</h1>
+    <div class='summary'>
+        <p><strong>Report Date:</strong> 2025-11-24 09:45</p>
+        <p><strong>Assessed Tenant:</strong> e6f6fec9-e8a5-4967-860e-5bcb2921b061</p>
+        <p><strong>Access Level:</strong> Power Platform Admin (Full)</p>
+        <p><strong>Total Findings:</strong> 35</p>
+    </div>
+
+    <div class='strategy'>
+        <h2>✅ Assessment Strategy Alignment</h2>
+        <p>This assessment covers all six domains from your strategy diagram:</p>
+        <ul>
+            <li><strong>Security Model & Accessibility</strong>: DLP, audit logs, roles</li>
+            <li><strong>Design, Data Model & Architecture</strong>: Dataverse, solutions, entities</li>
+            <li><strong>Flow, Formula & Optimization</strong>: Flow triggers, actions, efficiency</li>
+            <li><strong>Component Reusability</strong>: Component libraries, UI consistency</li>
+            <li><strong>Dashboard & Analytics</strong>: KPIs, visualizations, labeling</li>
+            <li><strong>Application Performance</strong>: Load times, screen count, usage</li>
+        </ul>
+    </div>
+
+    <h2>Security & Compliance Gaps</h2>
+    <table>
+        <thead>
+            <tr><th>Area</th><th>Issue</th><th>Risk</th><th>Impact</th><th>Mitigation</th><th>ISO 27001</th><th>CIS</th><th>Evidence</th></tr>
+        </thead>
+        <tbody><tr class='critical'>
+        <td>Security Model</td>
+        <td>No DLP policies defined</td>
+        <td><strong>Critical</strong></td>
+        <td>Unrestricted data flow between business and non-business connectors.</td>
+        <td>Create and enforce DLP policies blocking non-approved connectors.</td>
+        <td>A.8.2, A.13.2</td>
+        <td>CIS 3.1, 3.2</td>
+        <td><pre>Zero DLP policies found</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Overview | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: API Playground | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Dataverse Actions Page | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Plugin Monitor | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: ProjectManagement_DefaultCommandLibrary | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management App | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management - new UI | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management App - Dev copy | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management - copy | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: ProjectManagement_DefaultCommandLibrary | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management App | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management - new UI | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management - copy | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: HRRecruitment_DefaultCommandLibrary | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management App - Dev copy | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: HRRecruitment_DefaultCommandLibrary | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Plugin Monitor | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: API Playground | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Dataverse Actions Page | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Overview | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management - copy | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management - new UI | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: ProjectManagement_DefaultCommandLibrary | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management App | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Time Log Management App - Dev copy | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Weekly TimeCard Template - SP | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Nomination Form Demo | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: API Playground | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Plugin Monitor | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Overview | No component library used</pre></td>
+    </tr><tr class='medium'>
+        <td>Component Reusability</td>
+        <td>App does not use component library</td>
+        <td><strong>Medium</strong></td>
+        <td>Redundant UI elements increase maintenance cost and inconsistency.</td>
+        <td>Migrate to component libraries for reusable controls.</td>
+        <td>A.14.2.2, A.14.2.5</td>
+        <td>CIS 2.5: Use component libraries</td>
+        <td><pre>App: Dataverse Actions Page | No component library used</pre></td>
+    </tr>        </tbody>
+    </table>
+
+    <h2>Summary by Domain</h2>
+    <table>
+        <tr><th>Domain</th><th>Findings</th></tr><tr><td>Component Reusability</td><td>34</td></tr><tr><td>Security Model</td><td>1</td></tr>    </table>
+
+    <p><em>Report generated using native Power Platform admin PowerShell cmdlets. Microsoft Graph used for audit and license validation.</em></p>
+</body>
+</html>
