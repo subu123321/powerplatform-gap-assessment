@@ -77,3 +77,20 @@ This script uses interactive authentication and does not store credentials. All 
 📄 License
 This project is licensed under the MIT License — see the LICENSE file for details.
 
+▶️ How to Run
+Open PowerShell as Administrator
+Navigate to the script directory
+powershell
+
+
+1
+cd C:\Path\To\Script
+Run the script
+powershell
+
+
+1
+.\PowerPlatform-EnterpriseGapAssessment.ps1
+Sign in when prompted with your Global Admin account
+📁 The script generates an HTML report in the same directory (e.g., PowerPlatform_Enterprise_GapAssessment_20251124_1230.html) 
+
